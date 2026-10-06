@@ -200,8 +200,8 @@ function initContactForm() {
     btn.disabled = true;
     const data = {
       name: document.getElementById("name").value.trim(),
-      phone: document.getElementById("email").value.trim(),
-      source: document.getElementById("message").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      message: document.getElementById("message").value.trim(),
     };
     console.log(data);
     // Demo: 1.5s keyin success ko'rsat
@@ -234,7 +234,7 @@ function sendToSheet(data, callback) {
   // ── GOOGLE SHEETS ── (URL keyinroq qo'shiladi)
 
   fetch(
-    `https://script.google.com/macros/s/AKfycbwZhzs0c4zjza8snKAtUkQioJcu7p2zZHZTzG_NUQeQ3xUUNIJQUroJUR1BbzIih6A/exec`,
+    `https://script.google.com/macros/s/AKfycbwqoJdWOOaWCGdsc3-qqTO-0ZQJQBLbZ5po3kSCwadbHlIM6NAKy5HtHBhxls8ePYsM/exec`,
     {
       method: "POST",
       body: JSON.stringify(data),
